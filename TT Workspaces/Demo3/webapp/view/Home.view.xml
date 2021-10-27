@@ -1,0 +1,73 @@
+<mvc:View controllerName="yt.demo3.controller.Home" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:f="sap.f" 
+	xmlns:form="sap.ui.layout.form" 
+	xmlns:w="sap.ui.integration.widgets" 
+	xmlns:cssgrid="sap.ui.layout.cssgrid" 
+	xmlns:cc="yt.demo3.controls.PieChart" 
+	xmlns:commons="sap.suite.ui.commons" 
+	xmlns:core="sap.ui.core">
+
+	<Page>
+
+		<Panel id="panelCopyPasteForm" headerText="Copy Pase Form">
+
+			<Button text="CopyPaste On / Off" press="pressExcelModeOnOff"></Button>
+			<form:SimpleForm id="simpleFormPaste" editable="true" layout="ResponsiveGridLayout" title="Address" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+				<form:content>
+					<Label text="Name" />
+					<Input id="name" value="{formModel>/SupplierName}" fieldGroupIds="fgFormInput" />
+					<Label text="Street/No." />
+					<Input value="{formModel>/Street}" fieldGroupIds="fgFormInput">
+					</Input>
+					<Input value="{formModel>/HouseNumber}" fieldGroupIds="fgFormInput">
+
+					</Input>
+					<Label text="ZIP Code/City" />
+					<Input value="{formModel>/ZIPCode}" fieldGroupIds="fgFormInput">
+
+					</Input>
+					<Input value="{formModel>/City}" fieldGroupIds="fgFormInput" />
+					<Label text="Country" />
+					<Select id="country" selectedKey="{formModel>/Country}">
+						<items>
+							<core:Item text="England" key="England" />
+							<core:Item text="Germany" key="Germany" />
+							<core:Item text="USA" key="USA" />
+						</items>
+					</Select>
+				</form:content>
+			</form:SimpleForm>
+		</Panel>
+		<!-- <Panel id="panelProcessFlow" headerText="">
+
+			<commons:ProcessFlow nodes="{pfModel>/nodes}" lanes="{pfModel>/lanes}">
+				<commons:lanes>
+					<commons:ProcessFlowLaneHeader laneId="{pfModel>id}" iconSrc="{pfModel>icon}" text="{pfModel>label}" position="{pfModel>position}" />
+				</commons:lanes>
+				<commons:nodes>
+					<commons:ProcessFlowNode laneId="{pfModel>lane}" nodeId="{pfModel>id}" title="{pfModel>title}" titleAbbreviation="{pfModel>titleAbbreviation}" children="{pfModel>children}" state="{pfModel>state}" stateText="{pfModel>stateText}" texts="{pfModel>texts}" focused="{pfModel>focused}" />
+				</commons:nodes>
+			</commons:ProcessFlow>
+		</Panel> -->
+		<!-- <HBox id="customControl1" headerText="Custom Control Example 1">
+			<cc:PieChart height="800px" width="600px" data="{chartModel>/data}" options="{chartModel>/options}"></cc:PieChart>
+		</HBox>
+
+
+		<HBox id="customControl2" headerText="Custom Control Example 2">
+			<cc:PieChart height="200px" width="300px" data="{chartModel>/data}" options="{chartModel>/options}"></cc:PieChart>
+		</HBox>
+
+
+
+		<Panel id="secondPanel" headerText="">
+
+			<Input maxLength="{path: '/#ZINPUTS/Ebeln/@maxLength', formatter: 'parseInt'}"></Input>
+		</Panel>
+
+		<Panel id="mainPanel" headerText="Dynamic Table">
+		</Panel> -->
+	</Page>
+</mvc:View>

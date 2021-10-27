@@ -1,0 +1,21 @@
+<mvc:View controllerName="int.trial.fragment.ZINT_TRIAL_FRAGMENT.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Panel headerText="{i18n>MixedExample}" class="sapUiResponsiveMargin" width="auto">
+							<content>
+								<Button icon="sap-icon://action-settings" text="Show Fragment Dialog" press="onShowFragment" 	class="sapUiSmallMarginEnd"></Button>
+								<Button text="Show Message Toast" press="onShowMessageToast" class="myCustomButton"></Button>
+								<Input value="{/personel/name}" valueLiveUpdate="true" width="60%"/>
+								<FormattedText htmlText="Hello {/personel/name}" class="sapUiSmallMargin  myCustomText"/>
+							</content>
+						</Panel>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

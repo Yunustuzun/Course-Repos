@@ -1,0 +1,17 @@
+<mvc:View controllerName="int.trial.mvc1.ZINT_TRIAL_MVC1.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<VBox>
+							<Label text="{firstModel>/name} "></Label>
+							<Button text="Etiketi Güncelle 1" press="changeLabel1"></Button>
+							<Button text="Etiketi Güncelle 2" press="changeLabel2"></Button>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

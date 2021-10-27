@@ -1,0 +1,115 @@
+<mvc:View controllerName="yt.demo1.controller.Home" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:f="sap.f" 
+	xmlns:w="sap.ui.integration.widgets" 
+	xmlns:cssgrid="sap.ui.layout.cssgrid" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:core="sap.ui.core"  
+	xmlns:google = "yt.demo1.control.GoogleChart">
+
+	<Page>
+		<!-- <p:RadarChart class="sapUiResponsiveMargin" scaleOverride="{/options/scaleOverride}" scaleStartValue="{/options/scaleStartValue}" scaleSteps="{/options/scaleSteps}" scaleStepWidth="{/options/scaleStepWidth}" height="600px" width="600px">
+			<p:axes>
+				<core:Item text="January" />
+				<core:Item text="February" />
+				<core:Item text="March" />
+				<core:Item text="April" />
+				<core:Item text="May" />
+				<core:Item text="June" />
+				<core:Item text="July" />
+				<core:Item text="August" />
+			</p:axes>
+			<p:dataSets>
+				<p:DataSet fillColor="rgba(102,45,145,.1)" strokeColor="rgba(102,45,145,1)" pointColor="rgba(220,220,220,1)" pointStrokeColor="#fff" data="{/dataset1}">
+					<p:Value value="{value}" />
+				</p:DataSet>
+				<p:DataSet fillColor="rgba(63,169,245,.1)" strokeColor="rgba(63,169,245,1)" pointColor="rgba(151,187,205,1)" pointStrokeColor="#fff" data="{/dataset2}">
+					<p:Value value="{value}" />
+				</p:DataSet>
+			</p:dataSets>
+		</p:RadarChart> -->
+		<!-- 
+		<google:DonutChart data="{googleChart>/data}" options="{googleChart>/options}">
+		</google:DonutChart> -->
+		<!-- <html:canvas id="myChart" width="400" height="400"></html:canvas> -->
+		<f:ShellBar title="Drone Hive" secondTitle="{/date}" homeIcon="{/homeIconUrl}" showCopilot="true" showSearch="true" showNotifications="true" showProductSwitcher="true" notificationsNumber="2" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
+
+
+			<f:menu>
+				<Menu>
+					<MenuItem text="Drone Hive" icon="{/homeIconUrl}" />
+				</Menu>
+			</f:menu>
+			<f:profile>
+				<f:Avatar initials="UI" />
+			</f:profile>
+		</f:ShellBar>
+		<VBox>
+
+			<Label text="{firstModel>/demoNumberx} "></Label>
+			<Button text="Odata Get" press="onHandleOdataGet">
+			</Button>
+
+		</VBox>
+
+		<ScrollBar>
+		</ScrollBar>
+		<VBox id="vboxBindingExamples">
+			<Label text="Ülkeler" />
+			<List items="{secondModel>/customer/company/2/country}">
+				<StandardListItem title="{secondModel>name}" />
+			</List>
+			<Label text="Sektörler 1" />
+
+			<List items="{secondModel>/customer/company}">
+
+				<InputListItem label="{secondModel>sector/name}">
+					<Input value="{
+						
+						path:  'secondModel>averageSale',
+						mode : 'OneTime'
+						
+						}" />
+				</InputListItem>
+			</List>
+
+
+			<Label text="Sektörler 2" />
+			<List>
+
+				<infoToolbar>
+					<Toolbar>
+
+						<Label text="Label 1"></Label>
+					</Toolbar>
+				</infoToolbar>
+				<items>
+					<StandardListItem title="Title 1" description="Desc 1" />
+					<StandardListItem title="Title 2" description="Desc 2" />
+					<StandardListItem title="Title 3" description="Desc 3" />
+				</items>
+			</List>
+
+			<Label text="Sektörler 3" />
+
+			<List items="{secondModel>/customer/company}">
+
+				<StandardListItem title="{secondModel>sector/name}" description="{=
+				  ${secondModel>sector/name} === 'Gıda'  ? '$' :  ${secondModel>name} === 'Coca Cola' ? 'TL' : '€'     
+				  } " />
+			</List>
+
+
+
+			<Label text="Sektörler 4" />
+
+		</VBox>
+
+		<VBox>
+
+		</VBox>
+	</Page>
+
+
+</mvc:View>

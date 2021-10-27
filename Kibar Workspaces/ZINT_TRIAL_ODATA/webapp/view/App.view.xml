@@ -1,0 +1,31 @@
+<mvc:View controllerName="int.trial.odata.ZINT_TRIAL_ODATA.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<List id="mainList" items="{/SalesHeaderSet}" 	mode="SingleSelect">
+							<headerToolbar>
+								<OverflowToolbar>
+									<Title text="Orders" level="H2"/>
+									<ToolbarSpacer/>
+									<Button text="Delete" press="handleButtonPress"/>
+									<Button text="Create" press="handleButtonPress"/>
+									<Button text="Update" press="handleButtonPress"/>
+								</OverflowToolbar>
+							</headerToolbar>
+							<ObjectListItem title="{Vbeln}">
+								<firstStatus>
+									<ObjectStatus text="{parts: ['Netwr','Waerk'], type: 'sap.ui.model.type.Currency', formatOptions: { minDecimalDigits: 3 }}"/>
+								</firstStatus>
+								<ObjectAttribute text="{Ernam}"/>
+								<ObjectAttribute text="{ path : 'Erdat' , type: 'sap.ui.model.type.Date' , formatOptions: { style: 'full' } }"/>
+								<!--style -> short , long , medium-->
+							</ObjectListItem>
+						</List>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

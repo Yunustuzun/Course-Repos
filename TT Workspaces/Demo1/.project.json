@@ -1,0 +1,29 @@
+{
+  "mockpreview": {
+    "mockUri": "",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "deploy": {
+    "destination": "TTGGD",
+    "name": "ZSATIS_MESAJLA"
+  },
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "com.watt.common.builder.sapui5clientbuild"
+  ],
+  "build": {
+    "buildRequired": true,
+    "targetFolder": "dist",
+    "lastBuildDateTime": "Sun, 01 Dec 2019 00:42:52 GMT"
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "tr",
+    "defaultLanguage": "tr",
+    "defaultI18NPropertyFile": "",
+    "resourceModelName": ""
+  }
+}

@@ -1,0 +1,62 @@
+{
+    "_version": "1.5.0",
+    "sap.app": {
+        "_version": "1.2.0",
+        "id": "yt.demo1.extend",
+        "type": "component",
+        "applicationVersion": {
+            "version": "1.65.7"
+        },
+        "title": "{{plugin_title}}",
+        "dataSources": {}
+    },
+    "sap.ui": {
+        "_version": "1.3.0",
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "base",
+            "sap_hcb",
+            "sap_belize",
+            "zsap_belize"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "contentDensities": {
+            "compact": true,
+            "cozy": false
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "yt.demo1.extend.i18n.i18n"
+                }
+            }
+        },
+        "dependencies": {
+            "minUI5Version": "1.65",
+            "libs": {
+                "sap.ui.core": {
+                    "minVersion": "1.65.9"
+                },
+                "sap.m": {
+                    "minVersion": "1.65.9"
+                },
+                "zret.library.main": {
+                    "minVersion": "1.65.9"
+                }
+            }
+        },
+        "componentName": "yt.demo1.extend"
+    },
+    "sap.flp": {
+        "type": "plugin",
+        "config": {}
+    }
+}

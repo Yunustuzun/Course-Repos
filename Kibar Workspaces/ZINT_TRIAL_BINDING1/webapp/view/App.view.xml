@@ -1,0 +1,16 @@
+<mvc:View controllerName="int.trial.binding1.ZINT_TRIAL_BINDING1.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<List items="{listModel>/customers}">
+							<StandardListItem title="{listModel>name}" description="{listModel>country}"/>
+						</List>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

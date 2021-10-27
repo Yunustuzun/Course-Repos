@@ -1,0 +1,23 @@
+<mvc:View controllerName="yt.demo4.controller.Home" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:f="sap.f" 
+	xmlns:form="sap.ui.layout.form" 
+	xmlns:w="sap.ui.integration.widgets" 
+	xmlns:cssgrid="sap.ui.layout.cssgrid" 
+	xmlns:cc="yt.demo4.controls.PieChart" 
+	xmlns:commons="sap.suite.ui.commons" 
+	xmlns:core="sap.ui.core">
+
+	<Page>
+
+		<Panel>
+			<form:SimpleForm id="simpleFormPaste" editable="true" layout="ResponsiveGridLayout" title="Inputs" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+				<form:content>
+					<Label text="Malzeme No" />
+					<Input id="name" value="1" fieldGroupIds="fgFormInput" change="onInputNameChange"/>
+				</form:content>
+			</form:SimpleForm>
+		</Panel>
+	</Page>
+</mvc:View>
